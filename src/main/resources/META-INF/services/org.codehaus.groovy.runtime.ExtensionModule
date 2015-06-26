@@ -1,0 +1,4 @@
+moduleName=sponge-gradle
+moduleVersion=2.6-SNAPSHOT
+extensionClasses=org.joshuacoles.extensions.CollectionsExtension,org.joshuacoles.extensions.GradleExtensions,org.joshuacoles.extensions.Predef
+staticExtensionClasses=

@@ -1,0 +1,28 @@
+group 'gradle.plugins'
+version '2.6-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'maven-publish'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+}
+
+publishing {
+    //noinspection GroovyAssignabilityCheck
+    repositories std_mvn.push.snapshots
+
+    publications {
+        'default'(MavenPublication) {
+            groupId 'gradle.plugins'
+            artifactId 'sponge'
+
+            from components.java
+        }
+    }
+}
